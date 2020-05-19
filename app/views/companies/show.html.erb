@@ -20,5 +20,14 @@
   <%= @company.country %>
 </p>
 
+<h3>Games</h3>
+<ul>
+  <% @company.game.each do | game | %>
+  <li>
+    <strong><%= game.name %></strong>
+  </li>
+  <% end %>
+</ul>
+
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>

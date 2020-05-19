@@ -25,5 +25,16 @@
   <%= @game.company_id %>
 </p>
 
+<h3>Critics</h3>
+<ul>
+  <% @game.critic.each do | critic | %>
+  <li>
+    <strong><%= critic.username %></strong>
+    <p><%= critic.title %></p>
+    <p><%= critic.body %></p>
+  </li>
+  <% end %>
+</ul>
+
 <%= link_to 'Edit', edit_game_path(@game) %> |
 <%= link_to 'Back', games_path %>
